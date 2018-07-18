@@ -1,0 +1,50 @@
+<div class="container">
+    <h2>Directiva ngswitch</h2>
+
+    <span [ngSwitch]="numero">
+
+        <!-- Como es numero no hace falta que vaya entre comillas -->
+        <p *ngSwitchCase="3">
+            Es el numero 3
+        </p>
+        <p *ngSwitchCase="5">
+            Es el numero 5
+        </p>
+        <p *ngSwitchDefault>
+            No es ningun numero
+        </p>
+    </span>
+
+
+
+
+    <!-- Le paso la propiedad y la comparo con switch -->
+    <ul [ngSwitch]="color">
+
+        <!-- Al ser un string tiene que ir entre comillas -->
+        <!-- La propiedad ngstyle entre comillas simples -->
+
+        <li *ngSwitchCase="'red'" [ngStyle]="{
+        'background': color,
+         'color': 'white',
+         'font-size' : '30px',
+         'padding' : '10px'
+        }">
+            Es de color ROJO
+        </li>
+
+        <li *ngSwitchCase="'green'" [ngStyle]="{'background': color}">
+            Es de color VERDE
+        </li>
+        
+        <li *ngSwitchCase="'blue'" [ngStyle]="{'background': 'blue'}">
+            Es de color AZUL
+        </li>
+    </ul>
+
+
+
+
+
+
+</div>

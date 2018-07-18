@@ -1,0 +1,32 @@
+<h2>Componente EmpleadoComponent</h2>
+
+<!--
+         DIRECTIVA NGIF y EVENTO CLICK
+         Si se cumple la condición se muestra toda la etiqueta 
+    
+    
+    -->
+
+
+<div class="caja" *ngIf="trabajadorExterno == true">
+    <button (click)="cambiarExterno(false)">Mostrar Nombres</button>
+    <ul>
+        <li>{{arrayEmpleado[0].nombre}}</li>
+        <li>{{arrayEmpleado[1].nombre}}</li>
+        <li>{{arrayEmpleado[2].nombre}}</li>
+
+    </ul>
+</div>
+
+
+<div class="caja" *ngIf="trabajadorExterno == false">
+    <button (click)="cambiarExterno(true)">Mostrar Trabajador</button>
+    <ul>
+        <li>{{empleado.nombre}}</li>
+        <li>{{empleado.edad}}</li>
+        <li>{{empleado.puesto}}</li>
+        <li *ngIf="empleado.contrato == true">{{conContrato}}</li>
+        <li *ngIf="empleado.contrato == false">{{sinContrato}}</li>
+
+    </ul>
+</div>

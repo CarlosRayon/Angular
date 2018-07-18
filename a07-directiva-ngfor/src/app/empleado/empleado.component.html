@@ -1,0 +1,48 @@
+<div class="container">
+    <h2>Uso de la directiva ng for</h2>
+
+    <h3>Listado de empleados SIN indices</h3>
+
+    <ul>
+        <li *ngFor="let empleado of listaEmpleado">
+            <strong>Empleado:</strong>
+            <ul>
+                <li>{{empleado.nombre}}</li>
+                <li>{{empleado.edad}}</li>
+                <li>{{empleado.puesto}}</li>
+                <li *ngIf="empleado.contrato == true ">Tiene contrato</li>
+                <li *ngIf="empleado.contrato == false ">No Tiene contrato</li>
+            </ul>
+            <hr>
+        </li>
+        <br> 
+    </ul>
+
+    <h3>Listado de empleados CON indices</h3>
+
+    <ul>
+        <li *ngFor="let empleado of listaEmpleado; let i = index">
+            <strong>Empleado {{i + 1}}:</strong>
+            <ul>
+                <li>{{empleado.nombre}}</li>
+                <li>{{empleado.edad}}</li>
+                <li>{{empleado.puesto}}</li>
+                <li *ngIf="empleado.contrato == true ">Tiene contrato</li>
+                <li *ngIf="empleado.contrato == false ">No Tiene contrato</li>
+            </ul>
+        </li>
+        <br>
+        <hr>
+    </ul>
+
+    <h3>Lista de Numeros</h3>
+    <ul>
+        <li *ngFor="let numero of listaNumeros;">
+            {{numero}}
+        </li>
+    </ul>
+
+
+
+
+</div>
