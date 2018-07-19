@@ -1,0 +1,41 @@
+<button (click)="mostrarDatos()">Mostrar Datos</button>
+
+<div class="container" *ngIf="datos == true">
+
+    <h2>Hola mi nombre es {{nombre}} y tengo estas cualidades</h2>
+    <ul>
+        <li>{{cualidades.cualidadUno}}</li>
+        <li>{{cualidades.cualidadDos}}</li>
+        <li>{{cualidades.cualidadTres}}</li>
+
+    </ul>
+
+    <h2>He tenido los siguientes trabajo</h2>
+
+    <ul>
+        <li *ngFor="let trabajo of trabajos">{{trabajo}}</li>
+    </ul>
+
+    <h2 *ngIf="ocupado == false">Actualmente NO ocupado</h2>
+    <h2 *ngIf="ocupado == true;">Actualmente SI ocupado</h2>
+
+    <button (click)="cambiarOcupacion()">Cambiar Estado Ocupación</button>
+</div>
+
+
+
+<div class="selector-colores">
+    <h3>Selector de colores</h3>
+    <!-- Con esto conseguimos que la propiedad colorSeleccionado se iguale con el dato del input -->
+    <input type="text" [(ngModel)]="colorSeleccionado">
+    <div [ngStyle]="{
+        'background': colorSeleccionado,
+        'width' : ancho,
+        'height': alto,
+        'margin' : '10px auto'
+}">
+    </div>
+    <p>El color seleccionado es: <strong>{{colorSeleccionado}}</strong></p>
+
+    <button (click) ="logColor()">Console.log del Color Seleccionado</button>
+</div>
