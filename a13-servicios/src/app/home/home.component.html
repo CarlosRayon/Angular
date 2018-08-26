@@ -1,0 +1,33 @@
+<main>
+  <header>
+    <h1>{{titulo}}</h1>
+  </header>
+
+  <aside>
+      <p *ngIf="prendaNueva">Prenda a guardar: <strong>{{prendaNueva}}</strong></p>
+  </aside>
+
+  <article>
+    <h2>{{tituloServicio}}</h2>
+
+    <input type="text" [(ngModel)] = "prendaNueva">
+    <br>
+    
+    
+    <button (click) = "guardarPrenda()">Añadir Prenda</button>
+
+    <div>
+      <h3>Listado ropa</h3>
+      <ul>
+        <li *ngFor="let ropa of listadoRopa; let i = index">{{i}} {{ropa}}
+          
+          <button (click) = "eliminarPrenda(i)">Eliminar</button>
+        </li>
+      </ul>
+    </div>
+
+  </article>
+  <footer>Propiedad del servicio: {{nombre}}</footer>
+
+
+</main>

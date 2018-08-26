@@ -1,0 +1,20 @@
+.container-contacto{
+
+width: 60%;
+margin: 10px auto;
+border: 2px double gray;
+padding: 5px;
+
+
+}
+
+h2{
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: blue;
+  
+}
+ h2:hover{
+     text-decoration: none;
+ }

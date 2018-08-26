@@ -1,0 +1,16 @@
+<div class="personas">
+    <h2>Lista de personas</h2>
+
+    <ul>
+        <li *ngFor="let persona of listaPersonas">{{persona.nombre}}</li>
+    </ul>
+
+    <h2>Tienen coche</h2>
+
+    <ul>
+        <li *ngFor="let persona of listaPersonas">
+            <span *ngIf="persona.tieneCoche == true">{{persona.nombre}} Si tiene coche marca {{persona.modelo}}</span>
+            <span *ngIf="persona.tieneCoche == false">{{persona.nombre}} No tiene coche</span>
+        </li>
+    </ul>
+</div>

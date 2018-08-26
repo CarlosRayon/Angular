@@ -14,7 +14,7 @@ export class Empleado {
 
     /* ------------------------------------ */
     /* Forma de Angular/TypeScript */
-    /*Definimos las propiedades en los parámetros directamente*/
+    /* Definimos las propiedades en los parámetros directamente */
     /* ------------------------------------ */
     constructor(
         public nombre: string,

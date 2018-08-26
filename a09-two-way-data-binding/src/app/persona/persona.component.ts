@@ -17,7 +17,7 @@ export class PersonaComponent {
     public ocupado: boolean;
     public datos: boolean;
 
-    public colorSeleccionado:string;
+    public colorSeleccionado: string;
 
     // Propiedades para el CSS \
 
@@ -30,14 +30,14 @@ export class PersonaComponent {
 
         this.nombre = "Carlos Rayón";
         this.cualidades = new Cualidades("Trabajador", "alto", "moreno");
-        this.trabajos = ["Panadero", "Tecnico", "Desarrollador"];
+        this.trabajos = ["Panadero", "Técnico", "Desarrollador"];
         this.ocupado = false;
         this.datos = false;
 
         this.colorSeleccionado = "#CCC";
 
 
-        
+
         this.ancho = "200px";
         this.alto = "200px";
     }
@@ -59,6 +59,8 @@ export class PersonaComponent {
         } else {
             this.ocupado = true;
         }
+
+        // this.ocupado = !this.ocupado;
     }
     /**
      * Metodo para cambiar la propiedad datos
@@ -70,13 +72,15 @@ export class PersonaComponent {
         } else {
             this.datos = false;
         }
+
+        // this.datos = !this.datos;
     }
 
 
     /**
      * Metodo que muestra el valor del color seleccionado por console.log
      */
-public logColor(){
-    console.log(this.colorSeleccionado);
-}
+    public logColor() {
+        console.log(this.colorSeleccionado);
+    }
 }

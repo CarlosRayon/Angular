@@ -1,0 +1,15 @@
+.personas{
+    width: 80%;
+    background: lightseagreen;
+    padding:10px;
+    margin: 10px auto;
+}
+
+h2{
+    text-align: center;
+}
+
+li{
+    list-style: none;
+    font-size: 18px;
+}

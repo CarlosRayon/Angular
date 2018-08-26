@@ -1,0 +1,81 @@
+<div class="container">
+    <h1>Directiva ngswitch</h1>
+
+    <span [ngSwitch]="numero">
+
+        <!-- Como es numero no hace falta que vaya entre comillas -->
+        <p *ngSwitchCase="3">
+            Es el numero 3.
+        </p>
+        <p *ngSwitchCase="5">
+            Es el numero 5.
+        </p>
+        <p *ngSwitchDefault>
+            No es ningun numero.
+        </p>
+    </span>
+
+    <!-- Le paso la propiedad y la comparo con switch -->
+    <ul [ngSwitch]="color">
+
+        <!-- Al ser un string tiene que ir entre comillas -->
+        <!-- La propiedad ngstyle entre comillas simples -->
+
+        <li *ngSwitchCase="'red'" [ngStyle]="{
+        'background': color,
+         'color': 'white',
+         'font-size' : '30px',
+         'padding' : '10px'
+        }">
+            Es de color ROJO
+        </li>
+
+        <li *ngSwitchCase="'green'" [ngStyle]="{'background': color}">
+            Es de color VERDE
+        </li>
+
+        <li *ngSwitchCase="'blue'" [ngStyle]="{'background': 'blue'}">
+            Es de color AZUL
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    
+    <h1>ngStyle y ngClass</h1>
+
+    <h2 [style.border]=" color == 'red' ? '5px solid black' : '2px solid green' ">
+
+        Uso ng-style en formato de atributo. Añade estilos en linea al elemento si se cumple la condición
+
+    </h2>
+
+    <!-- Definimos estilos CSS de manera global en la capeta assets del proyecto (La linkeamos en el index.html) -->
+
+    <h2 [class.fondoAzul]="colorFondo == true">
+        Uso de ng-class. Añadirá la clase a este elemento si se cumple la condición
+    </h2>
+
+    <h2 [ngClass]="[
+                    'fondoVerde',
+                    'conPadding'
+                   ]">
+
+        Podemos incluir la clases de maneras obligatorias y por defecto estilos en los elementos
+    </h2>
+
+    <h2 [ngClass]="{
+                    'fondoAzul': colorFondo == true,
+                    'tamanoLetra' : tamanoGrande == true,
+                    'conPadding' : 2 + 2 == 4
+                   }">
+
+        Directiva ng-class. Permite añadir mas de una clase si se cumple la condición
+
+    </h2>
+
+
+
+
+
+</div>

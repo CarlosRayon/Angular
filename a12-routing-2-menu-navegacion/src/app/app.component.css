@@ -1,0 +1,32 @@
+.container {
+    width: 80%;
+    margin: 10px auto;
+    border: 4px solid gray;
+    background-color: antiquewhite;
+}
+
+nav {
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+}
+
+a {
+    color: white;
+    background: lightslategray;
+    padding: 0 30px;
+    text-decoration: none;
+}
+
+a:hover {
+
+    cursor: pointer;
+
+}

@@ -1,0 +1,14 @@
+.container-coche{
+
+    width: 80%;
+    background: lightcoral;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+    display: block;
+    margin: 10px;
+}

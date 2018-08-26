@@ -1,0 +1,32 @@
+<h2>Formulario de Prueba</h2>
+
+<!-- Ponemos nombre al formulario indicando que es un formulario de Angular le añado un funcion al hacer submit y un reset-->
+<form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset();">
+
+    <label for="nombre">Nombre:</label>
+    <!-- Ponemos nombres a los imput (#nombre) para indicar que son propiedades del objeto -->
+    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" required>
+
+    <!-- Se muestra si el campo a sido tocado y el campo no es valido https://www.w3schools.com/angular/angular_validation.asp -->
+
+    <span *ngIf="nombre.touched && !nombre.valid">El nombre del coche no es correcto</span>
+    <label for="Caballos">Caballos:</label>
+    <input type="text" name="Caballos" #caballos="ngModel" [(ngModel)]="coche.caballos" required pattern="[0-9]+">
+    <span *ngIf="caballos.touched && !caballos.valid">Los caballos del coche no es correcto</span>
+
+    <label for="color">color:</label>
+    <input type="text" name="color" #color="ngModel" [(ngModel)]=" coche.color" required pattern="[a-zA-Z#]+">
+    <span *ngIf="color.touched && !color.valid">El color del coche no es correcto</span>
+
+    <!-- EL boton desabilidato hasta que los campos seran correctos -->
+    <input type="submit" value="Guardar" [disabled]="!formCoche.form.valid">
+
+</form>
+
+
+<div>
+    <h4>Listado de coches</h4>
+    <ul>
+        <li *ngFor="let coche of coches">{{coche.nombre}} {{coche.caballos}} {{coche.color}}</li>
+    </ul>
+  </div>

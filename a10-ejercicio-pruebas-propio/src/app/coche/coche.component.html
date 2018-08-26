@@ -1,0 +1,39 @@
+<div class="container-coche">
+
+    <div>
+        <button (click)="mostrarCoche()">Mostrar Coche:</button>
+
+        <div class="datos-coche" *ngIf="mostrarDatos == true">
+            <p>
+                <strong>La marca del coche es:</strong> {{marca}}</p>
+            <p>
+                <strong>El modelo del coche es:</strong> {{modelo}}</p>
+            <p>
+                <strong>El precio del coche es:</strong> {{precio}}</p>
+        </div>
+    </div>
+
+    <div>
+        <button (click)="mostrarCambioCoche()">Cambiar Datos:</button>
+
+        <div class="cambiar-datos" *ngIf="cambiarDatos == true">
+
+            <input type="text" placeholder="Cambio de marca" [(ngModel)]="marca">
+            <input type="text" placeholder="Cambio de modelo" [(ngModel)]="modelo">
+            <input type="number" placeholder="Cambio de precio" [(ngModel)]="precio">
+
+        </div>
+    </div>
+</div>
+
+<h2>
+    Personas que tienen el coche {{marca}}:
+</h2>
+
+<p *ngFor="let persona of personas.listaPersonas">
+
+    <span *ngIf="persona.modelo == marca">
+<strong>{{persona.nombre}}</strong>
+    </span>
+    
+</p>

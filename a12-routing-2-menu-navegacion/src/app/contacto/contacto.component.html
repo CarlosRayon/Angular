@@ -1,0 +1,16 @@
+<div class="container-contacto">
+    <h2>{{titulo}}</h2>
+
+    <p>Pasar un parametro por url para verle:</p>
+
+    <div *ngIf="parametro">
+        <p>El parametro cogido de la url es : {{parametro}}</p>
+    </div>
+
+    <div *ngIf="!parametro">
+        <button (click) = "redirigir()">Ir a la pagina con parametro</button>
+        <button (click) = "redirigirEmpleado()">Ir a empleado </button>
+        <button (click) = "redirigirHome()">Ir a home (Con un parametro) </button>
+    </div>
+
+</div>

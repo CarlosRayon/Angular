@@ -1,0 +1,20 @@
+.datos{
+    width: 60%;
+    margin: 10px auto;
+    border: 1px dotted blue;
+    padding: 10px;
+    background: lightpink;
+}
+h2{
+    text-align: center;
+}
+
+ul{
+
+  width: 200px; 
+  margin: 0 auto; 
+}
+
+li{
+    list-style: none;
+}

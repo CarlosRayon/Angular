@@ -1,0 +1,13 @@
+<div class="container">
+
+    <nav>
+        <!-- Para hacer enlaces usamos la directiva RouterLink -->
+        <!-- routerLinkActive agrega una clase cuando estamos en la dirección del router link (La clase la creamos en assets) -->
+        <a [routerLink]="['/home']" routerLinkActive="activado">Home</a>
+        <a [routerLink]="['/empleado']" routerLinkActive="activado">Empleado</a>
+        <a [routerLink]="['/contacto']" routerLinkActive="activado">Contacto</a>
+    </nav>
+
+    <router-outlet></router-outlet>
+
+</div>

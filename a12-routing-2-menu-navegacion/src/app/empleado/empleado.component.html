@@ -1,0 +1,18 @@
+<div class="datos">
+
+    <h1>Pagina del Empleado</h1>
+
+    <h2>Datos Personales del Empleado</h2>
+
+    <ul>
+        <li>
+            <strong>Nombre:</strong> {{nombre}}</li>
+        <li>
+            <strong>Edad:</strong> {{edad}}</li>
+    </ul>
+    <h2>Trabajos</h2>
+    <ul>
+
+        <li *ngFor="let trabajo of trabajos">{{trabajo}}</li>
+    </ul>
+</div>

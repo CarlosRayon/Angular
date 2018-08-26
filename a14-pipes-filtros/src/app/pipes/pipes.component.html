@@ -1,0 +1,57 @@
+<div class="container-pipes">
+
+  <header>
+    <h1>
+      Estamos en la sección Pipes
+    </h1>
+  </header>
+
+  <article>
+
+    <h2>Fechas</h2>
+
+    <p>Poniendo propiedad sola:
+      <strong>{{fecha}}</strong>
+    </p>
+    <p>Filtramos con un pipes ( date:'fullDate' ):
+      <strong>{{fecha | date:'fullDate' }}</strong>
+    </p>
+    <p>Filtramos con un pipes ( date:'dd/MM/yy' ):
+      <strong>{{fecha | date:'dd/MM/yy' }}</strong>
+    </p>
+    <p>Filtramos con un pipes ( date:'dd/mm/yyyy' ):
+      <strong>{{fecha | date:'dd/MM/yyyy' }}</strong>
+    </p>
+
+    <p>
+      <strong>Mas info: </strong>
+      <a href="https://angular.io/api/common/DatePipe" target="_blank">https://angular.io/api/common/DatePipe</a>
+    </p>
+
+    <h2>Transformación caracteres</h2>
+
+    <p>Texto a mayúsculas ( uppercase):
+      <strong>{{texto | uppercase}}</strong>
+    </p>
+    <p>Texto a mayúsculas ( lowercase):
+      <strong>{{texto | lowercase}}</strong>
+    </p>
+
+    <h2>Combinación de pipes</h2>
+    <p>Combino formato texto con formato fecha (date:'fullDate' | uppercase):
+      <strong>{{fecha | date:'fullDate' | uppercase}}</strong>
+    </p>
+
+    <h2>Creación de pipes</h2>
+    <p> Con el pipe creado (ver video) he importado le podemos usar:</p>
+    <p>Usamos el pipe creado: {{texto | alreves}}</p>
+    <p>Puedo pasar texto normal como string: {{"Texto pasado como string" | alreves}}</p>
+
+
+  </article>
+
+
+
+
+
+</div>

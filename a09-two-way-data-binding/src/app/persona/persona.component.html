@@ -26,8 +26,12 @@
 
 <div class="selector-colores">
     <h3>Selector de colores</h3>
-    <!-- Con esto conseguimos que la propiedad colorSeleccionado se iguale con el dato del input -->
+    
+    <!-- Con esto conseguimos que la propiedad colorSeleccionado se iguale con el dato del input (Necesario tener el FormsModule importado en app.module.ts) -->
+
     <input type="text" [(ngModel)]="colorSeleccionado">
+
+
     <div [ngStyle]="{
         'background': colorSeleccionado,
         'width' : ancho,

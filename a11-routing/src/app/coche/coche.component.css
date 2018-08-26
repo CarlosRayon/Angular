@@ -1,0 +1,15 @@
+.coche{
+
+    width: 80%;
+    height: 500px;
+    margin: 10px auto;
+    padding: 10px;
+    background: lightblue;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+h2{
+    text-align: center;
+}

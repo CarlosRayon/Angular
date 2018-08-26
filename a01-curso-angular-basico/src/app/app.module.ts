@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
+
 /* -------- Los declaro para poder usarlos --------*/
 @NgModule({
   declarations: [

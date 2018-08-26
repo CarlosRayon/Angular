@@ -1,0 +1,11 @@
+<h2>Commponente persona</h2>
+<p>Servicio creado con CLI: {{datoCLI}}</p>
+<p>Servicio creado con el tutorial: {{datoTuto}}</p>
+
+<h2>Listamos los datos recogidos del servidor</h2>
+
+<ul *ngIf="articulos">
+    <li *ngFor="let articulo of articulos">{{articulo.userId}} <br>{{articulo.title}}</li>
+</ul>
+<!-- Con el if hacemos un aviso de carga sencillo -->
+<span *ngIf="!articulos">Cargando listado</span>
